@@ -19,6 +19,7 @@ import java.util.stream.Stream;
  */
 /**
  * TODO:
+ * add description do .md
  * Add author comment
  * if resource file does not exist, then write error message
  * add log4j, slf4j, properties file for messages 
