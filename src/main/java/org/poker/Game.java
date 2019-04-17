@@ -7,8 +7,10 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 
 /***
  * 
@@ -31,8 +33,8 @@ import org.apache.logging.log4j.Logger;
 */
 public class Game {
 
-    private static final Logger logger = LogManager.getLogger(Game.class);
-//    private final static Logger logger = LoggerFactory.getLogger(Game.class);
+//    private static final Logger logger = LogManager.getLogger(Game.class);
+    private final static Logger logger = LoggerFactory.getLogger(Game.class);
 
 	public Game(){
 	}
@@ -43,7 +45,7 @@ public class Game {
         logger.info("This Will Be Printed On Info");
         logger.warn("This Will Be Printed On Warn");
         logger.error("This Will Be Printed On Error");
-        logger.fatal("This Will Be Printed On Fatal");
+//        logger.fatal("This Will Be Printed On Fatal");
  
         logger.info("Appending string: {}.", "Hello, World");
 
