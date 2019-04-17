@@ -1,19 +1,15 @@
 package org.poker;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /***
  * 
  */
@@ -35,16 +31,29 @@ import java.util.stream.Stream;
 */
 public class Game {
 
+    private static final Logger logger = LogManager.getLogger(Game.class);
+//    private final static Logger logger = LoggerFactory.getLogger(Game.class);
+
 	public Game(){
 	}
 	public static void main(String[] args) {
+
+	    logger.info("info Logger is working!");
+        logger.debug("This Will Be Printed On Debug");
+        logger.info("This Will Be Printed On Info");
+        logger.warn("This Will Be Printed On Warn");
+        logger.error("This Will Be Printed On Error");
+        logger.fatal("This Will Be Printed On Fatal");
+ 
+        logger.info("Appending string: {}.", "Hello, World");
+
 		try {
 			
 			System.out.println("HI");
 	
 			Game game = new Game();
 //			game.run(args);
-			game.run(new String[]{"pokerdata.txt"});
+		//	game.run(new String[]{"pokerdata.txt"});
 		
 		} catch (Exception e) {
 			System.out.println("Error:");
